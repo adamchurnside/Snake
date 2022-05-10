@@ -3,8 +3,8 @@ import pygame, sys, time, random
 speed = 15
 
 # window sizes
-frame_size_x = 720
-frame_size_y = 480
+frame_size_x = 1380
+frame_size_y = 840
 
 check_errors = pygame.init()
 
@@ -27,7 +27,7 @@ blue = pygame.Color(0, 0, 255)
 fps_controller = pygame.time.Clock()
 
 # one snake square size
-square_size = 20
+square_size = 60
 
 def init_vars():
     global head_pos, snake_body, food_pos, food_spawn, score, direction
@@ -110,7 +110,9 @@ while True:
     # GFX
     game_window.fill(black)
     for pos in snake_body:
-        pygame.draw.rect(game_window, green, pygame.Rect(pos[0] + 2, pos[1] + 2, square_size -2, square_size))
+        pygame.draw.rect(game_window, green, pygame.Rect(
+                    pos[0] + 2, pos[1] + 2, 
+                    square_size -2, square_size -2))
 
     pygame.draw.rect(game_window, red, pygame.Rect(food_pos[0], food_pos[1], square_size, square_size))
 
