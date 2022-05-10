@@ -105,6 +105,7 @@ while True:
     if not food_spawn:
         food_pos = [random.randrange(1, (frame_size_x // square_size)) * square_size,
                     random.randrange(1, (frame_size_y // square_size)) * square_size]
+        food_spawn = True
 
     # GFX
     game_window.fill(black)
